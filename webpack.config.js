@@ -11,6 +11,20 @@ module.exports = {
   },
   devServer: {
     static: path.resolve(__dirname, 'dist'),
+    setupMiddlewares: (middlewares, devServer) => {
+      if (!devServer) {
+        throw new Error('webpack-dev-server is not defined');
+      }
+
+      devServer.app.get('/success', (req, res) => {
+        res.json({ id: 1 });
+      });
+      devServer.app.post('/error', (req, res) => {
+        res.sendStatus(500);
+      });
+
+      return middlewares;
+    }
   },
   plugins: [
     new HTMLWebpackPlugin({

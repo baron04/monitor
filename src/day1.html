@@ -6,12 +6,10 @@
     <title>前端监控SDK</title>
   </head>
   <body>
-    <div class="container">
+    <div id="container">
       <div class="content">
         <input type="button" value="点击抛出错误" id="errorBtn" />
         <input type="button" value="点击抛出Promise错误" id="promiseErrorBtn" />
-        <input type="button" value="ajax成功请求" id="ajaxSuccessBtn" />
-        <input type="button" value="ajax失败请求" id="ajaxErrorBtn" />
       </div>
     </div>
 
@@ -34,29 +32,9 @@
           // window.someVar.error = 'error';
         });
       });
-
-      function sendRequest(method, url, data) {
-        const xhr = new XMLHttpRequest;
-        xhr.open(method, url, true);
-        xhr.responseType = 'json';
-        xhr.onload = function () {
-          console.log('onload', xhr.response);
-        };
-        xhr.onerror = function () {
-          console.log('onerror', error);
-        };
-        xhr.send(data);
-      }
-
-      bindClick('ajaxSuccessBtn', function (event) {
-        sendRequest('GET', '/success');
-      });
-
-      bindClick('ajaxErrorBtn', function (event) {
-        sendRequest('POST', '/error', 'name=zhufeng');
-      });
     </script>
 
     <script src="/someError.js"></script>
+     
   </body>
 </html>
