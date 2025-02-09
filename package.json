@@ -1,0 +1,23 @@
+{
+  "name": "monitor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "user-agent": "^1.0.4"
+  }
+}

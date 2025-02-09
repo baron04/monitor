@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>前端监控SDK</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <input type="button" value="点击抛出错误" id="errorBtn" />
+        <input type="button" value="点击抛出Promise错误" id="promiseErrorBtn" />
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById('errorBtn')
+        .addEventListener('click', function (event) {
+          window.someVar.error = 'error';
+        });
+      // document.body.addEventListener('error', function (event) {
+      //   event.stopPropagation();
+      // });
+
+      document
+        .getElementById('promiseErrorBtn')
+        .addEventListener('click', function (event) {
+          new Promise((resolve, reject) => {
+            // reject();
+            throw new Error('my error');
+            // window.someVar.error = 'error';
+          });
+        });
+    </script>
+
+    <script src="/someError.js"></script>
+  </body>
+</html>
