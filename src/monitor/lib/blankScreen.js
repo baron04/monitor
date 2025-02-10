@@ -2,7 +2,7 @@ import getSelector from '../utils/getSelector';
 import onload from '../utils/onload';
 import tracker from '../utils/tracker';
 
-export function injectBlankScreen() {
+export function blankScreen() {
   const wrapperElements = ['html', 'body', '#container', '.content'];
   let emptyPoints = 0;
 

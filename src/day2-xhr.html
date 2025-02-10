@@ -16,7 +16,6 @@
         <input type="button" value="ajax成功请求" id="ajaxSuccessBtn" />
         <input type="button" value="ajax失败请求" id="ajaxErrorBtn" />
       </div>
-      <!-- <img src="https://img.rscl.cc/10.jpg" style="width: 400px;" /> -->
     </div>
 
     <script>
@@ -51,11 +50,6 @@
       bindClick('ajaxErrorBtn', function (event) {
         sendRequest('POST', '/error', 'name=zhufeng');
       });
-    </script>
-
-    <script>
-      const content = document.querySelector('.content');
-      content.innerHTML = '@'.repeat(10000);
     </script>
   </body>
 </html>

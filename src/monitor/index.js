@@ -1,7 +1,9 @@
-const { injectBlankScreen } = require('./lib/blankScreen');
 const { injectJsError } = require('./lib/jsError');
 const { injectXHR } = require('./lib/xhrError');
+const { blankScreen } = require('./lib/blankScreen');
+const { timing } = require('./lib/timing');
 
 injectJsError();
 injectXHR();
-injectBlankScreen();
+blankScreen();
+timing();

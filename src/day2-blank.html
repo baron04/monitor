@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>前端监控SDK</title>
+    <style>
+      .content {
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <!-- <img src="https://img.rscl.cc/10.jpg" style="width: 400px;" /> -->
+    </div>
+
+    <script>
+      function bindClick(id, func) {
+        document.getElementById(id).addEventListener('click', func);
+      }
+    </script>
+
+    <script>
+      const content = document.querySelector('.content');
+      content.innerHTML = '@'.repeat(10000);
+    </script>
+  </body>
+</html>
